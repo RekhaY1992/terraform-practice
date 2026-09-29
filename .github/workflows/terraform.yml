@@ -1,3 +1,4 @@
+
 name: Terraform Azure
 
 on:
@@ -24,6 +25,11 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+      - name: Check Azure account
+        run: |
+          az account show
+          az account list -o table
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
@@ -35,3 +41,5 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+
+
