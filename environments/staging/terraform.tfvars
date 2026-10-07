@@ -1,2 +1,5 @@
-resource_group_name = "rg-terraform-staging"
-location            = "East US"
+location = "East US"
+
+address_space = [
+  "10.20.0.0/16"
+]
