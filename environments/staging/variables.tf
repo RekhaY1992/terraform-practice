@@ -1,7 +1,7 @@
-variable "resource_group_name" {
+variable "location" {
   type = string
 }
 
-variable "location" {
-  type = string
+variable "address_space" {
+  type = list(string)
 }
