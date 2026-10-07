@@ -1,3 +1,6 @@
-resource_group_name = "rg-terraform-dev"
-location            = "East US"
+location = "East US"
+
+address_space = [
+  "10.10.0.0/16"
+]
 
